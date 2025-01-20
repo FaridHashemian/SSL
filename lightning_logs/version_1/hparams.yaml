@@ -1,0 +1,515 @@
+cat_feature_info:
+  cooperate_tax:
+    categories: 5
+    dimension: 1
+    preprocessing: imputer -> continuous_ordinal
+  feedin_tariff:
+    categories: 5
+    dimension: 1
+    preprocessing: imputer -> continuous_ordinal
+  net_metering:
+    categories: 21
+    dimension: 1
+    preprocessing: imputer -> continuous_ordinal
+  property_tax:
+    categories: 21
+    dimension: 1
+    preprocessing: imputer -> continuous_ordinal
+  rebate:
+    categories: 9
+    dimension: 1
+    preprocessing: imputer -> continuous_ordinal
+  sales_tax:
+    categories: 13
+    dimension: 1
+    preprocessing: imputer -> continuous_ordinal
+config: !!python/object:mambular.configs.mambular_config.DefaultMambularConfig
+  activation: !!python/object:torch.nn.modules.activation.SiLU
+    _backward_hooks: !!python/object/apply:collections.OrderedDict
+    - []
+    _backward_pre_hooks: !!python/object/apply:collections.OrderedDict
+    - []
+    _buffers: {}
+    _forward_hooks: !!python/object/apply:collections.OrderedDict
+    - []
+    _forward_hooks_always_called: !!python/object/apply:collections.OrderedDict
+    - []
+    _forward_hooks_with_kwargs: !!python/object/apply:collections.OrderedDict
+    - []
+    _forward_pre_hooks: !!python/object/apply:collections.OrderedDict
+    - []
+    _forward_pre_hooks_with_kwargs: !!python/object/apply:collections.OrderedDict
+    - []
+    _is_full_backward_hook: null
+    _load_state_dict_post_hooks: !!python/object/apply:collections.OrderedDict
+    - []
+    _load_state_dict_pre_hooks: !!python/object/apply:collections.OrderedDict
+    - []
+    _modules: {}
+    _non_persistent_buffers_set: !!set {}
+    _parameters: {}
+    _state_dict_hooks: !!python/object/apply:collections.OrderedDict
+    - []
+    _state_dict_pre_hooks: !!python/object/apply:collections.OrderedDict
+    - []
+    inplace: false
+    training: true
+  bias: false
+  bidirectional: false
+  d_model: 64
+  d_state: 128
+  dropout: 0.0
+  dt_init: random
+  dt_init_floor: 0.0001
+  dt_max: 0.1
+  dt_min: 0.0001
+  dt_rank: auto
+  dt_scale: 1.0
+  embedding_activation: !!python/object:torch.nn.modules.linear.Identity
+    _backward_hooks: !!python/object/apply:collections.OrderedDict
+    - []
+    _backward_pre_hooks: !!python/object/apply:collections.OrderedDict
+    - []
+    _buffers: {}
+    _forward_hooks: !!python/object/apply:collections.OrderedDict
+    - []
+    _forward_hooks_always_called: !!python/object/apply:collections.OrderedDict
+    - []
+    _forward_hooks_with_kwargs: !!python/object/apply:collections.OrderedDict
+    - []
+    _forward_pre_hooks: !!python/object/apply:collections.OrderedDict
+    - []
+    _forward_pre_hooks_with_kwargs: !!python/object/apply:collections.OrderedDict
+    - []
+    _is_full_backward_hook: null
+    _load_state_dict_post_hooks: !!python/object/apply:collections.OrderedDict
+    - []
+    _load_state_dict_pre_hooks: !!python/object/apply:collections.OrderedDict
+    - []
+    _modules: {}
+    _non_persistent_buffers_set: !!set {}
+    _parameters: {}
+    _state_dict_hooks: !!python/object/apply:collections.OrderedDict
+    - []
+    _state_dict_pre_hooks: !!python/object/apply:collections.OrderedDict
+    - []
+    training: true
+  embedding_bias: false
+  embedding_type: linear
+  expand_factor: 2
+  frequencies_init_scale: 0.01
+  head_activation: !!python/object:torch.nn.modules.activation.SELU
+    _backward_hooks: !!python/object/apply:collections.OrderedDict
+    - []
+    _backward_pre_hooks: !!python/object/apply:collections.OrderedDict
+    - []
+    _buffers: {}
+    _forward_hooks: !!python/object/apply:collections.OrderedDict
+    - []
+    _forward_hooks_always_called: !!python/object/apply:collections.OrderedDict
+    - []
+    _forward_hooks_with_kwargs: !!python/object/apply:collections.OrderedDict
+    - []
+    _forward_pre_hooks: !!python/object/apply:collections.OrderedDict
+    - []
+    _forward_pre_hooks_with_kwargs: !!python/object/apply:collections.OrderedDict
+    - []
+    _is_full_backward_hook: null
+    _load_state_dict_post_hooks: !!python/object/apply:collections.OrderedDict
+    - []
+    _load_state_dict_pre_hooks: !!python/object/apply:collections.OrderedDict
+    - []
+    _modules: {}
+    _non_persistent_buffers_set: !!set {}
+    _parameters: {}
+    _state_dict_hooks: !!python/object/apply:collections.OrderedDict
+    - []
+    _state_dict_pre_hooks: !!python/object/apply:collections.OrderedDict
+    - []
+    inplace: false
+    training: true
+  head_dropout: 0.5
+  head_layer_sizes: []
+  head_skip_layers: false
+  head_use_batch_norm: false
+  layer_norm_after_embedding: false
+  layer_norm_eps: 1.0e-05
+  lr: 0.0001
+  lr_factor: 0.1
+  lr_patience: 10
+  mamba_version: mamba-torch
+  n_frequencies: 48
+  n_layers: 3
+  norm: RMSNorm
+  plr_lite: false
+  pooling_method: avg
+  shuffle_embeddings: false
+  use_cls: false
+  use_learnable_interaction: false
+  use_pscan: false
+  weight_decay: 1.0e-06
+early_pruning_threshold: null
+family: null
+loss_fct: null
+lr: 0.0001
+lr_factor: 0.1
+lr_patience: 10
+lss: false
+num_classes: 1
+num_feature_info:
+  age_10_14_rate:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  age_15_17_rate:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  age_18_24_rate:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  age_25_34_rate:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  age_35_44_rate:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  age_45_54_rate:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  age_55_64_rate:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  age_5_9_rate:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  age_65_74_rate:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  age_75_84_rate:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  age_median:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  age_more_than_85_rate:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  air_temperature:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  atmospheric_pressure:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  average_household_income:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  average_household_size:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  avg_electricity_retail_rate:
+    categories: null
+    dimension: 47
+    preprocessing: imputer -> minmax -> ple
+  cooling_degree_days:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  daily_solar_radiation:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  diversity:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  dropout_16_19_inschool_rate:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  earth_temperature:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  earth_temperature_amplitude:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  education_bachelor_rate:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  education_college_rate:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  education_doctoral_rate:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  education_high_school_graduate_rate:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  education_less_than_high_school_rate:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  education_master_rate:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  education_professional_school_rate:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  elevation:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  employ_rate:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  frost_days:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  gini_index:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  health_insurance_none_rate:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  health_insurance_public_rate:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  heating_degree_days:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  heating_fuel_coal_coke_rate:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  heating_fuel_electricity_rate:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  heating_fuel_fuel_oil_kerosene_rate:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  heating_fuel_gas_rate:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  heating_fuel_none_rate:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  heating_fuel_solar_rate:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  household_type_family_rate:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  housing_unit_median_gross_rent:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  housing_unit_median_value:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  mortgage_with_rate:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  number_of_years_of_education:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  occupancy_owner_rate:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  occupancy_vacant_rate:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  occupation_administrative_rate:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  occupation_agriculture_rate:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  occupation_arts_rate:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  occupation_construction_rate:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  occupation_education_rate:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  occupation_finance_rate:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  occupation_information_rate:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  occupation_manufacturing_rate:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  occupation_public_rate:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  occupation_retail_rate:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  occupation_transportation_rate:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  occupation_wholesale_rate:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  population_density:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  poverty_family_below_poverty_level_rate:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  race_asian_rate:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  race_black_africa_rate:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  race_indian_alaska_rate:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  race_islander_rate:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  race_two_more_rate:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  race_white_rate:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  relative_humidity:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  transportation_bicycle_rate:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  transportation_car_alone_rate:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  transportation_carpool_rate:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  transportation_home_rate:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  transportation_motorcycle_rate:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  transportation_public_rate:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  transportation_walk_rate:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  travel_time_10_19_rate:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  travel_time_20_29_rate:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  travel_time_30_39_rate:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  travel_time_40_59_rate:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  travel_time_60_89_rate:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  travel_time_average:
+    categories: null
+    dimension: 56
+    preprocessing: imputer -> minmax -> ple
+  travel_time_less_than_10_rate:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  voting_2016_dem_percentage:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  voting_2016_gop_percentage:
+    categories: null
+    dimension: 64
+    preprocessing: imputer -> minmax -> ple
+  wind_speed:
+    categories: null
+    dimension: 36
+    preprocessing: imputer -> minmax -> ple
+optimizer_args: {}
+optimizer_type: Adam
+pruning_epoch: 5
+weight_decay: 1.0e-06
